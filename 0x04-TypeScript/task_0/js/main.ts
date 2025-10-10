@@ -20,12 +20,21 @@ let studentsList: Student[] = [student1, student2];
 
 const table = document.createElement("table");
 
+const tBody = document.createElement("tbody");
+
 studentsList.forEach((student: Student) => {
-    const row = table.insertRow();
+    const row = document.createElement("tr");
 
-    const firstNameCell = row.insertCell();
-    const locationCell = row.insertCell();
-
+    const firstNameCell = document.createElement("td");
     firstNameCell.textContent = student.firstName;
+    
+    const locationCell = document.createElement('td');
     locationCell.textContent = student.location;
+
+    row.appendChild(firstNameCell);
+    row.appendChild(locationCell);
+
+    tBody.appendChild(row);
 });
+
+table.appendChild(tBody);
