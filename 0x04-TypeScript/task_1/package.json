@@ -1,5 +1,5 @@
 {
-  "name": "task_1",
+  "name": "typescript_dependencies",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -7,7 +7,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "webpack-dev-server --open",
+    "build": "webpack",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
